@@ -14,6 +14,26 @@
     <div class="logo">
     <a href="#logo">LOGO </a>
 </div>
+<div class="nav">
+    <div class="single">
+    <a href="#">ABOUT</a>
+</div>
+<div class="single">
+     <i class="fas fa-user"></i>
+     <a href="#">TEAM</a>
+</div>
+     <div class="single">
+         <i class="fas fa-th"></i>
+      <a href="#">WORK</a>
+</div>
+      <div class="single">
+       <a href="#">PRICING</a>
+</div>
+       <div class="single">
+        <i class="fas fa-envelope"></i>
+        <a href="#">CONTACT</a>
+</div>
+</div>
 </div>
 </header>
 </body>
