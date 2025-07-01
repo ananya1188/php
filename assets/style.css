@@ -1,20 +1,36 @@
 body {
   margin: 0;
 }
-  .logo{
+  .logo {
     text-decoration: none;
     color: #000000d4;
-    font-size: 18px;
+    font-size: 17px;
     font-family: sans-serif;
-     width: 49%;
-     display: inline-block;
+    width: 57%;
+    display: inline-block;
 }
-
+.logo a {
+    text-decoration: none;
+    color: black;
+}
   
 .single {
     display: inline-block;
     width: 110px;
+    font-size: 16px;
 }
 .nav {
     display: inline-block;
+}
+.single a {
+    text-decoration: none;
+    color: black;
+    font-family: sans-serif;
+}
+.header-area {
+    padding: 15px 20px;
+}
+
+.banner{
+  background-image: url("./images/mac.jpg");
 }
