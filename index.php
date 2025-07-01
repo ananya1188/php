@@ -37,5 +37,8 @@
 </div>
 </div>
 </header>
+<div class="banner">
+    <div class="container">
+        <div class="bannee-section">
 </body>
 </html>
