@@ -6,6 +6,7 @@
     <title>Document</title>
      <link rel="stylesheet" href="assets/style.css">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+     <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
 </head>
 <body>
    
@@ -39,6 +40,88 @@
 </header>
 <div class="banner">
     <div class="container">
-        <div class="bannee-section">
+        <div class="banner-section">
+<div class="banner-head">
+     <h1>Start something that matters</h1>
+     <p>Stop wasting valuable time with projects that just isn't you.</p>
+</div>
+<div class="banner-button">
+    <a href="#"><span>Learn more and start today</span></a>
+</div>
+
+</div>
+</div>
+</div>
+
+<section class="section-area">
+<div class="container">
+    <div class="section">
+        <div class="sec-head">
+            <h2>ABOUT THE COMPANY</h2>
+            <p>Key features of our company</p>
+</div>
+<div class="icons-2">
+    <div class="parts">
+<div class="icons-img">
+    <i class="fa fa-desktop"></i>
+</div>
+<div class="icon-part">Responsive</div>
+    <div class="icon-part-para">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+</div>
+</div>
+<div class="parts">
+<div class="icons-img">
+    <i class="fa fa-heart"></i>
+</div>
+<div class="icon-part">Passion</div>
+    <div class="icon-part-para">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+</div>
+</div>
+<div class="parts">
+<div class="icons-img">
+<i class="fa fa-diamond"></i>
+</div>
+<div class="icon-part">Design</div>
+    <div class="icon-part-para">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+</div>
+</div>
+<div class="parts">
+<div class="icons-img">
+    <i class="fa fa-cog"></i>
+</div>
+<div class="icon-part">Support</div>
+    <div class="icon-part-para">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod <br> tempor incididunt ut labore et dolore.</p>
+</div>
+</div>
+
+
+</div>
+</div>
+</div>
+</section>
+<section class="section-block">
+    <div class="container">
+        <div class="block">
+            <div class="fst-block">
+                <div class="block-head">
+                <h3>We know design</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+</div>
+<div class="button-sec">
+   <a href="#"> <i class="fa fa-th"> </i>
+View Our Works</a>
+</div>
+</div>
+<div class="sec-block">
+    <img src="assets/images/phone_buildings.jpg">
+</div>
+</div>
+    </div>
+</section>
+
 </body>
 </html>

@@ -1,3 +1,7 @@
+*{
+  margin:0;
+
+}
 body {
   margin: 0;
 }
@@ -6,7 +10,7 @@ body {
     color: #000000d4;
     font-size: 17px;
     font-family: sans-serif;
-    width: 57%;
+    width: 56%;
     display: inline-block;
 }
 .logo a {
@@ -31,6 +35,188 @@ body {
     padding: 15px 20px;
 }
 
-.banner{
-  background-image: url("./images/mac.jpg");
+.banner {
+    background-image: url("./images/mac.jpg");
+    height: 552px;
 }
+.banner-button {
+    width: 24%;
+    margin: 56px 0px 0px 0px;
+}
+.banner-head {
+    color: white;
+}
+.banner-button a {
+    text-decoration: none;
+    color: #000000d1;
+    font-size: 18px;
+    font-family: sans-serif;
+}
+.banner-button span {
+    padding: 20px 21px;
+    background: #ffffffd9;
+    font-family: sans-serif;
+}
+.banner-head p {
+    font-size: 22px;
+    font-family: sans-serif;
+    margin-top: 46px;
+}
+.banner-head h1 {
+    font-size: 76px;
+    font-family: sans-serif;
+    font-weight: 100;
+}
+
+.banner-section {
+    padding: 127px 42px;
+    width: 80%;
+}
+.sec-head {
+    text-align: center;
+}
+.section {
+    margin-top: 10%;
+}
+.sec-head h2 {
+    font-weight: 100;
+    font-family: sans-serif;
+}
+.sec-head p {
+    margin-top: 20px;
+    font-size: 18px;
+    font-family: sans-serif;
+    color: #000000f2;
+}
+i.fa.fa-desktop {
+    font-size: 55px;
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+}
+.icons-img {
+    width: 24%;
+    display: inline-block;
+}
+.icons-2 {
+    width: 100%;
+    text-align: center;
+    margin-top: 5%;
+}
+i.fa.fa-diamond {
+    font-size: 60px;
+}
+i.fa.fa-heart {
+    font-size: 60px;
+}
+i.fa.fa-cog {
+    font-size: 57px;
+}
+.parts {
+    width: 23%;
+    display: inline-block;
+    margin-right: 15px;
+}
+.icon-part {
+    font-size: 20px;
+    margin-top: 35px;
+    font-family: sans-serif;
+    color: #000000de;
+}
+.icon-part-para p {
+    margin-top: 23px;
+    font-family: sans-serif;
+    line-height: 30px;
+    color: #000000de;
+}
+.fst-block {
+    width: 49%;
+}
+.block-head h3 {
+    font-size: 30px;
+    font-weight: 100;
+    font-family: sans-serif;
+}
+.block-head p {
+    font-size: 15px;
+    font-family: sans-serif;
+    margin-top: 15px;
+    line-height: 26px;
+}
+.block {
+    background: #f1f1f1;
+    padding: 123px 27px;
+}
+.button-sec {
+    background: black;
+    width: 23%;
+    padding: 14px 15px;
+    margin-top: 27px;
+    text-align: center;
+}
+.button-sec a {
+    text-decoration: none;
+    color: white;
+    font-family: sans-serif;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
