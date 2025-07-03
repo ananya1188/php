@@ -16,8 +16,11 @@ body {
 .logo a {
     text-decoration: none;
     color: black;
+    padding: 16px;
 }
-  
+  .logo a:hover {
+    background: #8080807d;
+}
 .single {
     display: inline-block;
     width: 110px;
@@ -25,19 +28,20 @@ body {
 }
 .nav {
     display: inline-block;
+    width: 52%;
 }
 .single a {
     text-decoration: none;
     color: black;
     font-family: sans-serif;
+    padding: 16px;
 }
-.header-area {
-    padding: 15px 20px;
+.single:hover{
+    background-color:#8080807d; ;
 }
 
 .banner {
     background-image: url("./images/mac.jpg");
-    height: 552px;
 }
 .banner-button {
     width: 24%;
@@ -45,6 +49,9 @@ body {
 }
 .banner-head {
     color: white;
+}
+.header-area {
+    padding-bottom: 14px;
 }
 .banner-button a {
     text-decoration: none;
@@ -131,6 +138,8 @@ i.fa.fa-cog {
 }
 .fst-block {
     width: 49%;
+    display: inline-block;
+    vertical-align: top;
 }
 .block-head h3 {
     font-size: 30px;
@@ -159,25 +168,74 @@ i.fa.fa-cog {
     color: white;
     font-family: sans-serif;
 }
+.icons .fa {
+    font: normal normal normal 14px / 1 FontAwesome;
+    font-size: 17px;
+    color: gray;
+}
+.icons {
+    padding-bottom: 50px;
+    width: 12%;
+    padding-left: 46px;
+}
+.sec-block img {
+    width: 100%;
+    border-radius: 10px;
+}
+.sec-block {
+    display: inline-block;
+    width: 49%;
+}
+section.section-block {
+    margin-top: 8%;
+}
+.Team-head {
+    text-align: center;
+}
+.team-img img {
+    width: 100%;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.team-img {
+    width: 100%;
+}
+.team-heading {
+    text-align: left;
+}
+.team-block {
+    margin: 0px 8px 0px 0px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16);
+    width: 23%;
+    display: inline-block;
+}
+.team-row {
+    text-align: center;
+}
+.team-heading {
+    text-align: left;
+}
+.contact-button {
+    background: #f1f1f1;
+    width: 100%;
+    padding: 13px 0px;
+}
+.contact-button a {
+    color: black;
+    text-decoration: none;
+}
+.team-para {
+    padding: 0px 21px;
+}
+.team-heading h3 {
+    font-size: 22px;
+    margin: 15px 0px;
+}
+.team-heading p {
+    color: #000000a6;
+}
+.long-para {
+    text-align: left;
+}
 
 
 
