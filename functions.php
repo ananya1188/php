@@ -49,9 +49,15 @@ function cmnt(){
 //call function 
 cmnt();
 
+$variable ="note";
 
+function myfirstmessage(){
+    global $variable;
 
-   
+    echo $variable;
+
+}
+   myfirstmessage();
 
 ?>
 

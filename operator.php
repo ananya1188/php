@@ -217,7 +217,7 @@ echo $a % $b."<br>";
 //Exponentiation
 $a = 30;
 $b = 3;
-echo $a ** $b;
+echo $a ** $b."<br>";
 
 
 //practice on year
@@ -239,11 +239,59 @@ elseif($year===2024){
     echo "year 2024";
 }
 elseif ($year===2025){
-    echo "year 2025";
+    echo "year 2025<br>";
 }
 elseif ($year===2026){
     echo "year 2026";
 }
 else 
     echo "no year added";
+
+//!= operator
+$a = 230;
+$b = 245;
+if($a != $b){
+    echo "$a is not equal to $b<br>";
+}
+//<> operator
+$a = 200;
+$b = 233;
+if ($a <> $b){
+    echo "$a is not equal to $b";
+}
+//!== operator
+$a = 20;
+$b = "20";
+if ( $a !== $b){
+    echo "Not identical";
+}
+
+
+
+
+
+
+//switch case - 
+
+$day = "Tueday";
+
+switch ($day) {
+
+
+  case "Monday":
+    echo "<br>Week started!!";
+
+    break;
+
+  case "Tueday":
+    echo "<br>Today is tuesday!!!";
+    break;
+  case "Wednesday":
+    echo "<br>Today is Wednesday!!!";
+    break;
+  default:
+    echo "<br>No day in this range!!!";
+}
+
+
 ?>
