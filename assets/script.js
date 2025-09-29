@@ -20,7 +20,7 @@ let abc = 1223;
 console.log(abc);
 }//console.log(global);
 
-
+                                                      
 
 let left = "12000";
 let right = 12000;
@@ -95,3 +95,19 @@ console.log(x);
 
 const username="ananya";
 console.log(username);
+
+function msg(){
+    console.log("hello")
+}
+msg();
+
+let main = 4323;
+function msge(){
+   console.log(main)
+}
+msge();
+
+function users(name){
+    console.log("hello", name ,"!");
+}
+users("ananya");
