@@ -36,7 +36,7 @@ function test(){
 test();
 
  function user(name){
-console.log("hello," +name+ "!",)
+console.log("hello," +name+ "!")
  }
 user("ananya");
 
@@ -57,12 +57,12 @@ j-=4;
 console.log(j);
 
 //multiply
-let v=22;
-v *=23;
+let v=2;
+v *=3;
 console.log(v);
 
 //division
-let m=23;
+let m=10;
 m /=2
 console.log(m);
 
@@ -111,3 +111,4 @@ function users(name){
     console.log("hello", name ,"!");
 }
 users("ananya");
+

@@ -4,11 +4,162 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+
+        li.item {
+    list-style: none;
+    background: black;
+    margin: 10px;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+.active {
+    background: red !important;
+}
+
+    </style>
 </head>
+
 <body>
    
-<h1> Hello world! 123</h1>
+
+<form action="" method="get" class="adwance">
+    <label for="name">verify Your age!!</label>
+    <input type="text" name="name" id="name" class="nameinput"/>
+    <button class="btn btn-primary" id="submit">Verify</button>
+</form>
+<br>
+    <form action ="" method="get" class="checking">
+        <label for ="name" >Checking Your Password</label>
+        <input type = "text" class="inputname" id="inputname" name="name">
+        <button class="btn btn-primary" type="submit" id = "checkPassword">check</button>
+    </form>
+
+<a href="google.com" id="datebtn" onclick="display()">redirect?</a>
+
+
+
+<div>
+<h2 class="test">uiwgdas</h2>
+<button class="uppercase">Uppercase</button>
 </div>
+</div>
+
+<ul>
+    <li class="item active">menu item</li>
+    <li class="item">menu item</li>
+    <li class="item">menu item</li>
+    <li class="item">menu item</li>
+    <li class="item">menu item</li>
+    <li class="item">menu item</li>
+</ul>
+
+<button class = "show" id ="show">Show</button>
+<div class="container" style="display:none">
+    <button class="close" id = "close">close</button>
+    <div class="row">
+        <h1>Form</h1>
+        <input type="text" id = "email" name="email">
+        <button type = "submit" name="submit" id="submit">submit</button>
+    </div>
+</div>
+<p>First Paragraph</p>
+<p>Second Paragraph</p>
+<p>Yet one more Paragraph</p>
 </body>
 <script src="assets/script.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script>
+$('#submit').click(function(e){
+e.preventDefault();
+let value = $('.nameinput').val();
+   if(value >=18){
+       alert('You are okay to visit!!');
+   }else{
+ alert('You are underage ' + value);
+       
+   }
+});
+
+$('#checkPassword').click(function(e){
+e.preventDefault();
+    let password=$('.inputname').val();
+    if(password.length>=6){
+        alert('password is enough');
+    } else{
+        alert('password must be at least 6 characters');
+    }
+});
+
+
+
+$('.uppercase').click(function(){
+
+    let test = $('.test').text();
+   
+    test.toUpperCase();
+});
+
+//function 
+
+function display(){
+    alert('today is tuesday');
+}
+// $(document).ready(function(){
+//   const btnone = $('.uppercase');
+//     btnone.on('click',function(){
+//         $('.test').toggle();
+//     });  
+// });
+
+$('.item').each(function(){
+
+   $(this).click(function(){
+    $('.item').removeClass('active');
+       $(this).addClass('active');
+   });
+    
+});
+
+$(document).ready(function(){
+    let open = $('#show');
+    let close=$('#close');
+
+    open.on('click',function(){
+  $('.container').fadeIn(500);
+  $(this).hide();
+    });
+
+    close.on('click', function(){
+       $('.container').fadeOut(500);
+       open.show();
+    });
+});
+  
+$( "p" ).on( "click", function() {
+  $( this ).toggle();
+} );
+
+
+// document.getElementById('datebtn').addEventListener('click', function(e){
+// e.preventDefault();
+// alert('google.com')
+// });
+
+
+// $('#datebtn').click(function(){
+//     display();
+// });
+
+
+    //queryselector - 
+    // document.querySelector('.nameinput');
+    // document.getElementsByTagName('input');
+    // document.getElementsByClassName('nameinput')[0];
+    // document.getElementById('name').value;
+
+
+    </script>
 </html>

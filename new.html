@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+       <style>
+
+        li.item {
+    list-style: none;
+    background: black;
+    margin: 10px;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+.active {
+    background: red !important;
+}
+    </style>
+</head>
+<body>
+    <button class="shows" id="show">show</button>
+    <div class="container" style="display:none;">
+                    <button id= "close">close</button>
+
+        <div class="row">
+            <h1>Hello Title</h1>
+            <p>Dummy test</p>
+            <form action="">
+                <input type="email" name="email" id="">
+                <button type="submit" value="Signup">submit</button>
+            </form>
+        </div>
+    </div>
+    <h2>shake</h2>
+    <ul>
+    <li class="item active">Papaya shake</li>
+    <li class="item">Oreo shake</li>
+     <li class="item">mango shake</li>
+      <li class="item">banana shake</li>
+       <li class="item">chocolate shake</li>
+        <li class="item">strawberry shake</li>
+</ul>
+
+    
+</body>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script>
+$(document).ready(function(){
+  const open = $('#show');
+  const close = $('#close');
+
+    open.on('click',function(){
+        $('.container').fadeIn(500);
+        $(this).hide();
+    });  
+
+    close.on('click',function(){
+         $('.container').fadeOut(500);
+        open.show();
+    });
+});
+$('.item').each(function(){
+    $(this).click(function(){
+        $('.item').removeClass('active');
+        $(this).addClass('active');
+    });
+});
+
+</script>
+</html>
