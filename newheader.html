@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>header</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        header.navigation {}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header.navigation {
+    background: #a600ff87;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 50px;
+}
+
+ul.menus {
+    display: flex;
+    gap: 50px;
+}
+
+li.menu-item {
+    list-style: none;
+}
+
+.col.logo {
+    color: #fff;
+    font-family: system-ui;
+}
+
+li.menu-item {
+    font-family: system-ui;
+    color: #fff;
+}
+
+.col {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+button.btn {
+    padding: 6px 10px;
+    background: #000;
+    color: #fff;
+    font-family: system-ui;
+}
+
+button#toggle, #close {
+    background: unset;
+    border: unset;
+    color: #fff;
+    font-size: 20px;
+}
+ #close {
+    display:none;
+ }
+#toggle{
+    display: none;
+}
+.mobile-menu{
+    width: 0px;
+    background: #a600ff87;
+
+}
+.mobile-menu ul.menus-mobile {
+    margin: 0;
+}
+.right{
+    width: 100%;
+    transition: ease-in-out 1s;
+}
+
+@media screen and (max-width: 900px) {
+ #toggle{
+    display: block;
+}
+.menu{
+    display:none;
+}
+.btn{
+    display:none;
+}
+
+}
+
+ul.menus-mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 20px;
+    align-items: center;
+}
+    </style>
+</head>
+<body>
+    <header class="navigation">
+        <div class="conatiner">
+            <div class="row">
+                <div class="col logo"><h2>MyLogo</h2></div>
+                <div class="col">
+                    <nav class="menu">
+                        <ul class="menus">
+                            <li class="menu-item">Home</li>
+                            <li class="menu-item">About</li>
+                            <li class="menu-item">Pricing</li>
+                            <li class="menu-item">Faq</li>
+                            <li class="menu-item">Contact</li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col">
+                    <button class="btn">Get Started</button>
+                    <button id="toggle"><i class="fa-solid fa-bars"></i></button>
+                     <button id="close"><i class="fa-solid fa-close"></i></button>
+
+                </div>
+            </div>
+            
+        </div>
+    </header>
+    <div class="mobile-menu">
+                <ul class="menus-mobile">
+                      <li class="menu-item">Home</li>
+                            <li class="menu-item">About</li>
+                            <li class="menu-item">Pricing</li>
+                            <li class="menu-item">Faq</li>
+                            <li class="menu-item">Contact</li>
+                </ul>
+            </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+
+<script>
+$(document).ready(function(){
+
+    //varaibles
+    const open = $('#toggle');
+    const close = $('#close');
+
+    //open dropdown function
+    $(open).click(function(e){
+        e.preventDefault();
+        $(this).fadeOut();
+        $(close).fadeIn();
+        $('.mobile-menu').addClass('right');
+
+    });
+
+    //close dropdown function
+    $(close).click(function(e){
+        e.preventDefault();
+        $(this).fadeOut();
+        $(open).fadeIn();
+        $('.mobile-menu').removeClass('right');
+    });
+
+
+});
+</script>
+</html>
