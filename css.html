@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .circle {
+            width: 180px;
+            height: 180px;
+            /* background: red; */
+            margin: 10px;
+            border: solid 2px black;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <button class="button" id="red">Red</button>
+        <button class="button" id="blue">Blue</button>
+        <button class="button" id="green">Green</button>
+        <button class="button" id="pink">Pink</button>
+    </div>
+    <div>
+        <button class="btn" data-type="square">square</button>
+        <button class="btn" data-type="round">round</button>
+        <button class="btn" data-type="rectangle">rectangle</button>
+    </div>
+    <div>
+        <button class="animate">Animate</button>
+    </div>
+
+    <div>
+
+        <div class="circle"></div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+<script>
+    $(document).ready(function(){
+    $('button').each(function(){
+        $(this).click(function(e){
+        e.preventDefault();
+        var id =  $(this).attr('id');
+         $('.circle').css('background-color', id);
+        });
+    });
+       $('button').each(function(){
+        $(this).click(function(e){
+        e.preventDefault();
+        var data =  $(this).data('type');
+        if(data === "square"){
+           $('.circle').css('border-radius', '0px');  
+        }
+         else if(data === "round"){
+                        $('.circle').css('border-radius', '50%');  
+
+         }
+            else if(data=== "rectangle"){
+                $('.circle').css('border-radius', '0px');  
+                 $('.circle').css('width', '300px');  
+            }
+            else{
+                //do nothing
+            }
+        });
+    });
+
+
+
+    $('.animate').click(function(e){
+e.preventDefault();
+ $('.circle').animate({width: "500px"});
+
+    });
+
+});
+</script>
+</html>

@@ -29,7 +29,50 @@ background-color: blue;
       border-radius: 5px;
       
     }
-  </style>
+#animate-resizable {
+  clear: both;       
+  margin-top: 20px;
+}
+
+      .ui-resizable-helper {
+         border: 1px dotted gray; }
+      .ui-selecting{
+background-color: blanchedalmond;
+      }
+      .ui-selected{
+        background-color: brown;
+      }
+      #grid-selectable {
+         margin: 0;
+          padding: 0; 
+          width: 450px;
+         }
+  #grid-selectable li {
+    list-style-type: none;
+     margin: 3px; 
+     padding: 1px; 
+     float: left; 
+     width: 100px;
+      height: 80px;
+       font-size: 4em; 
+       text-align: center; 
+    }
+    #sortable-grid li{
+      float: left;
+      margin: 10px 10px 10px 0px;
+      width: 100px;
+      height: 100px;
+      text-align: center;
+      font-size: 4em;
+    }
+    #sortable-grid{
+        margin: 0;
+         padding: 0;
+          width: 450px;
+    }
+
+
+    </style>
 </head>
 <body>
 
@@ -93,8 +136,168 @@ background-color: blue;
  <div id ="draggable10" class="ui-widget-content"style="width:200px; height:100px; padding:20px; float:left;background-color: cornsilk; ">
   <p>My cursor position is only controlled for the 'bottom' value</p>
  </div>
-</body>
+ <!-- <div id = "containment-wrapper" style="width: 20%; height:20px; border:2px solid #ccc; padding: 10px;">
+ <div id="draggable11" class="ui-widget-content"style="cursor: n-resize; ">
+  <p>I'm contained within the box</p>
+ </div>
+ <div id="draggable12" class="ui-widget-content"style="width:200px; height:100px; padding:20px; float:left;background-color: cornsilk; ">
+  <p>I'm contained within my parent</p>
+ </div>
+ </div> -->
+ <div id="draggable-nonvalid" style="background-color: #ccc;width: 100px; height: 100px; padding: 0.5em; float: left; margin: 10px 10px 10px 0;">
+  <p>I'm draggable but can't be dropped</p>
+ </div>
+ <div id="draggable-accept"  style="background-color: #ccc;width: 100px; height: 100px; padding: 0.5em; float: left; margin: 10px 10px 10px 0;">
+  <p>Drag me to my target</p>
+ </div>
+ <div id="droppable-dropped" style="width: 150px; height: 150px; padding: 0.5em; float: left; margin: 10px;">
+  <p>accept: '#draggable-accept'</p>
+ </div>
+<!-- animate resizable -->
+ <div id="animate-resizable" class="ui-widget-content" style="width: 200px;">
+  <h3 class="ui-widget-header" style=" text-align: center; margin: 0;">Animate</h3>
+ </div>
 
+<!-- grid selectable -->
+ <div id="grid-selectable" style="list-style-type:none;">
+<ol>
+  <li class="ui-state-default">1</li>
+  <li class="ui-state-default">2</li>
+  <li class="ui-state-default">3</li>
+  <li class="ui-state-default">4</li>
+  <li class="ui-state-default">5</li>
+  <li class="ui-state-default">6</li>
+  <li class="ui-state-default">7</li>
+  <li class="ui-state-default">8</li>
+  <li class="ui-state-default">9</li>
+  <li class="ui-state-default">10</li>
+  <li class="ui-state-default">11</li>
+  <li class="ui-state-default">12</li>
+</ol>
+</div>
+<div id="max-min-resize" class="ui-widget-content" style=" width: 200px; height: 150px; padding: 5px; margin-top: 20px; clear:both; background-color: blue;">
+  <h3 class="ui-widget-header" style="text-align: center; margin: 0;">max and min size</h3>
+</div>
+ <!-- connect list sortable -->
+<ul id="sortable1"class="connectedSortable"style="width: 200px;text-align: center; border: 1px solid #ccc; list-style-type: none;">
+  
+  <li class="ui-state-default">1</li>
+  <li class="ui-state-default">2</li>
+  <li class="ui-state-default">3</li>
+  <li class="ui-state-default">4</li>
+  <li class="ui-state-default">5</li>
+  <li class="ui-state-default">6</li>
+</ul>
+<ul id="sortable2"class="connectedSortable" style="width: 200px;text-align: center; border: 1px solid #ccc; list-style-type: none;">
+  
+  <li class="ui-state-default">1</li>
+  <li class="ui-state-default">2</li>
+  <li class="ui-state-default">3</li>
+  <li class="ui-state-default">4</li>
+  <li class="ui-state-default">5</li>
+  <li class="ui-state-default">6</li>
+</ul>
+<!-- sortable grid -->
+<ul id="sortable-grid" style="list-style-type: none;">
+  <li class="ui-state-default">1</li>
+  <li class="ui-state-default">2</li>
+  <li class="ui-state-default">3</li>
+  <li class="ui-state-default">4</li>
+  <li class="ui-state-default">5</li>
+  <li class="ui-state-default">6</li>
+  <li class="ui-state-default">7</li>
+  <li class="ui-state-default">8</li>
+  <li class="ui-state-default">9</li>
+  <li class="ui-state-default">10</li>
+  <li class="ui-state-default">11</li>
+  <li class="ui-state-default">12</li>
+  <!-- placeholder sortable -->
+</ul>
+<ul id="placeholder-sortable" style="width: 200px; margin-top: 0px; list-style-type: none;"  >
+  <li class="ui-state-default">1</li>
+  <li class="ui-state-default">2</li>
+  <li class="ui-state-default">3</li>
+  <li class="ui-state-default">4</li>
+  <li class="ui-state-default">5</li>
+  <li class="ui-state-default">6</li>
+</ul>
+<!-- accordion default -->
+ <div id = "accordion">
+  <h3>Section 1</h3>  
+  <div> 
+    <p> Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
+    ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
+    amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
+    odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.</p>
+  </div>
+  <h3>Section 2</h3>  
+  <div>
+    <p>Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
+    purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
+    velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
+    suscipit faucibus urna.</p>
+  </div>
+  <h3>Section 3</h3>  
+  <div>
+    <p>Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
+    purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
+    velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
+    suscipit faucibus urna.</p>
+  </div>
+  <h3>Section 4</h3>  
+  <div>
+    <p>Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
+    purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
+    velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
+    suscipit faucibus urna.</p>
+  </div>
+  <h3>Section 5</h3>  
+  <div>
+    <p>Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
+    purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
+    velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
+    suscipit faucibus urna.</p>
+  </div>
+ </div>
+<!-- accordion collapse -->
+  <div id = "accordion-collapse" style="margin-top: 30px;">
+ <h3>Section 1</h3>  
+  <div> 
+    <p> Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
+    ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
+    amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
+    odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.</p>
+  </div>
+  <h3>Section 2</h3>  
+  <div>
+    <p>Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
+    purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
+    velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
+    suscipit faucibus urna.</p>
+  </div>
+  <h3>Section 3</h3>  
+  <div>
+    <p>Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
+    purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
+    velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
+    suscipit faucibus urna.</p>
+  </div>
+  <h3>Section 4</h3>  
+  <div>
+    <p>Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
+    purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
+    velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
+    suscipit faucibus urna.</p>
+  </div>
+  <h3>Section 5</h3>  
+  <div>
+    <p>Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
+    purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
+    velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
+    suscipit faucibus urna.</p>
+  </div>
+ </div>
+</body>
   <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
   <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
@@ -127,17 +330,74 @@ $('#sortable').sortable();
 //draggable scroll
 $('#draggable3').draggable({scroll:true});
 $('#draggable4').draggable({scroll:true, scrollSensitivity:100});
-$('#draggable5').draggable({scroll:true, scrollSpeed:100})
+$('#draggable5').draggable({scroll:true, scrollSpeed:100});
 
 //dragable constrain movement
 $('#draggable6').draggable({axis:"y"});
 $('#draggable7').draggable({axis:"x"});
-});
+
  //cursor style
   $('#draggable8').draggable({cursor:"move", cursorAt:{top:56, left:100}});
 $('#draggable9').draggable({cursor:"crosshair", cursorAt:{top:-5, left:-5}});
-$('#draggable10').draggable({  cursorAt:{bottom:0}});
+$('#draggable10').draggable({cursorAt:{bottom:0}});
 
-</script>
+// constrain movement
+// $('#draggable11').draggable({containment:"#containment-wrapper",scroll:false});
+// $('#draggable12').draggable({containment:"parent"});
 
+//accept droppable
+$('#draggable-nonvalid, #draggable-accept').draggable();
+$('#droppable-dropped').droppable({
+  accept: "#draggable-accept",
+  classes:{
+    "ui-droppable-active":"ui-state-active",
+    "ui-droppable-hover":"ui-state-hover"
+  },
+  drop:function(event,ui){
+    $(this)
+    .addClass("ui-state-highlight")
+    .find("p")
+    .html('droppped');    
+  }
+
+});
+//animate resizable
+$('#animate-resizable').resizable({
+  animate:true
+});
+
+//grid selectable
+$('#grid-selectable').selectable();
+
+//max min resizable
+$('#max-min-resize').resizable({
+  maxHeight:250,
+  maxWidth:350,
+  minHeight:150,
+  minWidth:200
+});
+
+//connect list sortable
+$('#sortable1 , #sortable2').sortable({
+  connectWith:".connectedSortable"
+}).disableSelection();
+//grid sortable
+$('#sortable-grid').sortable();
+$('#sortable-grid').disableSelection();
+
+//placeholder sortable 
+$('#placeholder-sortable').sortable({
+  placeholder:"ui-state-highlight"
+}); 
+$("#placeholder-sortable").disableSelection();
+
+ 
+//accordion default
+$("#accordion").accordion();
+//accordion collapse
+$('#accordion-collapse').accordion({
+  collapsible:true
+});
+});
+</script> 
 </html>
