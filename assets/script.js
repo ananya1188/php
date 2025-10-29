@@ -97,7 +97,7 @@ const username="ananya";
 console.log(username);
 
 function msg(){
-    console.log("hello")
+    console.log("hello world")
 }
 msg();
 

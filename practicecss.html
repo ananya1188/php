@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
+    <style>
+        .main {
+    width: 200px;
+    height: 200px;  
+    border: 2px solid;
+    margin-top: 17px;
+    border-radius: 50%;
+}
+    </style>
+</head>
+<body>
+    <div>
+        <button class="button" id="red">red</button>
+        <button class="button" id="blue">blue</button>
+        <button class="button" id="green">green</button>
+        <button class="button" id="black">black</button>
+         <button class="button" id="pink">pink</button>
+    </div>
+
+    <div>
+        <button class="btn" data-name="square">Square</button>
+        <button class="btn" data-name="round">Round</button>
+        <button class="btn" data-name="rectangle">Rectangle</button>
+
+    </div>
+    <div>
+        <div class="main"></div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+ <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+ <script>
+    $(document).ready(function(){
+        $('.button').each(function(){
+            $(this).click(function(e){
+     e.preventDefault();
+     var id=$(this).attr('id');
+     $('.main').css('background-color',id);
+            });
+        });
+        $('.btn').each(function(){
+            $(this).click(function(e){
+e.preventDefault();
+var data=$(this).data('name');
+//sqaure
+if(data==="square"){
+    $('.main').css('border-radius','0px');
+    $('.main').css('width','200px');
+}
+//round
+else if(data==='round'){
+    $('.main').css('width','200');
+    $('.main').css('border-radius','400px');
+}
+//rectangle
+else if(data==='rectangle'){
+    $('.main').css('border-radius','0px');
+    $('.main').css('width','400');
+}
+
+          
+else{
+    'nothing'
+}
+            })
+        })
+    })
+ </script>
+</html>

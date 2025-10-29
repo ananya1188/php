@@ -1,82 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
     <style>
-        .circle {
-            width: 180px;
-            height: 180px;
-            /* background: red; */
-            margin: 10px;
-            border: solid 2px black;
-            border-radius: 50%;
-        }
+      .circle {
+        width: 180px;
+        height: 180px;
+        transition: 2ease;
+        margin: 10px;
+        border: solid 2px black;
+        border-radius: 50%;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <div>
-        <button class="button" id="red">Red</button>
-        <button class="button" id="blue">Blue</button>
-        <button class="button" id="green">Green</button>
-        <button class="button" id="pink">Pink</button>
+      <button class="button" id="red">Red</button>
+      <button class="button" id="blue">Blue</button>
+      <button class="button" id="green">Green</button>
+      <button class="button" id="pink">Pink</button>
     </div>
     <div>
-        <button class="btn" data-type="square">square</button>
-        <button class="btn" data-type="round">round</button>
-        <button class="btn" data-type="rectangle">rectangle</button>
+      <button class="btn" data-type="square">square</button>
+      <button class="btn" data-type="round">round</button>
+      <button class="btn" data-type="rectangle">rectangle</button>
     </div>
     <div>
-        <button class="animate">Animate</button>
+      <button class="animate">Animate</button>
     </div>
 
-    <div>
 
-        <div class="circle"></div>
+      <div class="circle"></div>
     </div>
-</body>
-<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-<script>
-    $(document).ready(function(){
-    $('button').each(function(){
-        $(this).click(function(e){
-        e.preventDefault();
-        var id =  $(this).attr('id');
-         $('.circle').css('background-color', id);
+    <!-- radio -->
+     <div class="widget">
+  <h1>Checkbox and radio button widgets</h1>
+     <h2>Radio Group</h2>
+      <fieldset>
+     <legend>Select a city</legend>
+     <label for="radio-1">New York</label>
+     <input type="radio" name="radio-1" id = 'radio-1'>
+     <label for="radio-2">London</label>
+      <input type="radio" name="radio-1" id="radio-2">
+     <label for="radio-3">Japan</label>
+     <input type="radio" name="radio-1" id="radio-3">
+     </fieldset>   
+      <!--checkbox  -->
+      <h2>checkbox</h2>
+      <fieldset>
+        <legend>Hotal Ratings</legend>
+        <label for="checkbox-1">1 Star</label>
+        <input type="checkbox" name="checkbox-1" id="checkbox-1">
+        <label for ="checkbox-2">2 Star</label>
+        <input type="checkbox" name="checkbox-2" id="checkbox-2">
+        <label for="checkbox-3">3 Star</label>
+        <input type="checkbox" name="checkbox-3" id="checkbox-3">
+         <label for="checkbox-4">4 Star</label>
+        <input type="checkbox" name="checkbox-4" id="checkbox-4">
+         <label for="checkbox-5">5 Star</label>
+        <input type="checkbox" name="checkbox-5" id="checkbox-5">
+      </fieldset>
+      <!-- control group -->
+
+  
+  <fieldset>
+    <legend>Rental Car</legend>
+    <div class="controlgroup-vertical">
+      <select>
+        <option>Compact car</option>
+        <option>Midsize car</option>
+        <option>Full size car</option>
+        <option>SUV</option>
+        <option>Luxury</option>
+        <option>Truck</option>
+        <option>Van</option>
+      </select>
+      <label for="transmission-standard-v">Standard</label>
+      <input type="radio" name="transmission-v" id="transmission-standard-v">
+      <label for="transmission-automatic-v">Automatic</label>
+      <input type="radio" name="transmission-v" id="transmission-automatic-v">
+      <label for="insurance-v">Insurance</label>
+      <input type="checkbox" name="insurance" id="insurance-v">
+      <label for="vertical-spinner" class="ui-controlgroup-label"># of cars</label>
+      <input id="vertical-spinner" class="ui-spinner-input">
+      <button id="book">Book Now!</button>
+    </div>
+  </fieldset>
+
+
+  <div class="api-section">
+    <ul class="items">Loading...</ul>
+  </div>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+   <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+  <script>
+    $(document).ready(function () {
+   $( ".controlgroup" ).controlgroup();
+    $( ".controlgroup-vertical" ).controlgroup({
+      "direction": "vertical"});
+
+
+      $("button").each(function () {
+        $(this).click(function (e) {
+          e.preventDefault();
+          var id = $(this).attr("id");
+          $(".circle").css("background-color", id);
         });
-    });
-       $('button').each(function(){
-        $(this).click(function(e){
-        e.preventDefault();
-        var data =  $(this).data('type');
-        if(data === "square"){
-           $('.circle').css('border-radius', '0px');  
-        }
-         else if(data === "round"){
-                        $('.circle').css('border-radius', '50%');  
-
-         }
-            else if(data=== "rectangle"){
-                $('.circle').css('border-radius', '0px');  
-                 $('.circle').css('width', '300px');  
-            }
-            else{
-                //do nothing
-            }
+      });
+      $("button").each(function () {
+        $(this).click(function (e) {
+          e.preventDefault();
+          var data = $(this).data("type");
+          if (data === "square") {
+            $(".circle").css("border-radius", "0px");
+          } else if (data === "round") {
+            $(".circle").css("border-radius", "50%");
+          } else if (data === "rectangle") {
+            $(".circle").css("border-radius", "0px");
+            $(".circle").css("width", "300px");
+          } else {
+            //do nothing
+          }
         });
-    });
+      });
 
+      $(".animate").click(function (e) {
+        e.preventDefault();
+        $(".circle").animate({ width: "500px" });
+      });
 
+      $('input').checkboxradio();
 
-    $('.animate').click(function(e){
-e.preventDefault();
- $('.circle').animate({width: "500px"});
-
-    });
+      
 
 });
-</script>
+  
+ const requestOptions = {
+  method: "GET",
+  redirect: "follow"
+};
+
+fetch("https://jsonplaceholder.typicode.com/posts/", requestOptions)
+  .then((response) => response.text())
+  .then((result) => console.log(result)
+//implentation
+
+)
+  .catch((error) => console.error(error));
+
+
+
+  result
+  </script>
 </html>
